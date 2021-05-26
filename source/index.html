@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  	<title>Remrating-spb</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body class="page__body">
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="#">
+            <picture>
+              <source media="(min-width: 1351px)" srcset="img/desktop-images/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/tablet-images/logo-tablet.svg">
+              <img class="header__logo-img" src="img/mobile-images/logo-mobile.svg" width="116" height="28" alt="Логотип Remrating-spb">
+            </picture>
+          </a>
+          <form class="form-search" action="#" method="POST">
+            <button class="form-search__btn-search form-search__btn button" type="submit">
+              <span class="visually-hidden">Кнопка поиска</span>
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/tablet-images/icon-search.svg">
+                <img class="form-search__img-search" src="img/mobile-images/icon-search.svg">
+              </picture>
+            </button>
+            <label class="visually-hidden" for="search">Строка поиска</label>
+            <input class="form__input-search" type="search" name="search" id="search" placeholder="Введите название компании...">
+            <button class="form-search__btn-clean form-search__btn button" type="button"><span class="visually-hidden">Очистить форму поиска</span></button>
+          </form>
+          <a class="button button__add" href="#">Добавить компанию +</a>
+          <nav class="main-nav main-nav__closed main-nav--no-js">
+            <button class="main-nav__button-toggle button-toggle button" type="button"></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Ремонт квартир</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Дизайн интерьеров</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Карта компаний</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="#">Последние отзывы</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--calc" href="#calculate">Калькулятор ремонта</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="page-main">
+      <section class="calculate">
+        <div class="calculate__description">
+          <p class="calculate__description-text">Воспользуйтесь нашим кальулятором, чтобы просчитать примерную стоимость вашего ремонта. Калькулятор считает среднюю цену на основе прайсов всех представленных в рейтинге компаний. Не стоит доверять компаниям, которые указывают цену от 1500 за квадратный метр...
+          </p>
+        </div>
+        <div class="calculate__wrapper" id="calculate">
+          <h1 class="calculate__title">Калькулятор ремонта</h1>
+          <form class="calculate__form" action="#" method="POST" id="calcform">
+            <div class="calculate__form-inner">
+              <div class="calculate__inner">
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="room-type">Тип помещения:</label>
+                  <select class="calculate__select-box calculate__select-box--drop-down" size="1" name="room-type" id="roomtype" required>
+                    <option class="calculate__option" value="6000">Новостройка</option>
+                    <option class="calculate__option" value="8500">Вторичка</option>
+                  </select>
+                </div>
+                <div class="calculate__field calculate__field--second">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="area">Площадь ремонта:</label>
+                  <input class="calculate__select-box calculate__select-box--range calculate__select-box--area" type="text" name="text" placeholder="42 кв.м" id="area" value="42" required>
+                  <input class="calculate__input-range calculate__input-range--area" type="range" name="range" step="1" min="1" max="300" id="rangearea" value="42">
+                </div>
+              </div>
+              <div class="calculate__inner">
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="electrician">Электрика:</label>
+                  <select class="calculate__select-box calculate__select-box--drop-down calculate__select-box--electrician" size="1" name="electrician" id="electrician" required>
+                    <option class="calculate__option calculate__option--electrician" value="0">Нет</option>
+                    <option class="calculate__option calculate__option--electrician" value="300">Частичная замена и подкл.</option>
+                    <option class="calculate__option calculate__option--electrician" value="600">Новая от вводного кабеля</option>
+                  </select>
+                </div>
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="walls">Общий периметр стен:</label>
+                  <input class="calculate__select-box" type="text" name="text" placeholder="50 м" id="walls" required>
+                </div>
+              </div>
+              <div class="calculate__inner">
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="repair">Тип ремонта:</label>
+                  <select class="calculate__select-box calculate__select-box--drop-down" size="1" name="repair" id="repair"required>
+                    <option class="calculate__option" value="0">Косметический</option>
+                    <option class="calculate__option" value="1500">Капитальный</option>
+                    <option class="calculate__option" value="3000">Дизайнерский</option>
+                  </select>
+                </div>
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="ceilings">Потолки:</label>
+                  <select class="calculate__select-box calculate__select-box--drop-down" size="1" name="ceilings" id="ceilings" required>
+                    <option class="calculate__option" value="0">Нет</option>
+                    <option class="calculate__option" value="300">Гипсокартон</option>
+                    <option class="calculate__option" value="450">Натяжной</option>
+                    <option class="calculate__option" value="600">2-уровня гипсокартон</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calculate__inner">
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="bathroom">Ремонт санузла:</label>
+                  <select class="calculate__select-box calculate__select-box--drop-down calculate__select-box--bathroom-repair" size="1" name="ceilings" id="bathroom" required>
+                    <option class="calculate__option" value="13000">Да</option>
+                    <option class="calculate__option" value="0">Нет</option>
+                  </select>
+                </div>
+                <div class="calculate__field calculate__field--bathroom calculate__field--bathroom-show">
+                  <label class="calculate__fieldname calculate__fieldname--star calculate__fieldname--bathroom" for="bathroom" id="bathroomfield">Площадь санузла:</label>
+                  <input class="calculate__select-box calculate__select-box--range calculate__select-box--bathroom" type="text" name="text" placeholder="8 кв.м" id="bathroomarea" value="42" required>
+                  <input class="calculate__input-range calculate__input-range--bathroom" type="range" name="range" id="rangebathroom" step="1" min="1" max="20" value="8">
+                </div>
+              </div>
+              <div class="calculate__inner calculate__inner--last">
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="floors">Теплые полы:</label>
+                  <select class="calculate__select-box calculate__select-box--drop-down" size="1" name="floors" id="floors" required>
+                    <option class="calculate__option" value="200">Да</option>
+                    <option class="calculate__option" value="0">Нет</option>
+                  </select>
+                </div>
+                <div class="calculate__field">
+                  <label class="calculate__fieldname calculate__fieldname--star" for="doors">Двери:</label>
+                  <select class="calculate__select-box calculate__select-box--drop-down" size="1" name="doors" id="doors" required>
+                    <option class="calculate__option" value="0">Нет</option>
+                    <option class="calculate__option" value="8500">1</option>
+                    <option class="calculate__option" value="17000">2</option>
+                    <option class="calculate__option" value="25500">3</option>
+                    <option class="calculate__option" value="34000">4</option>
+                    <option class="calculate__option" value="42500">5</option>
+                  </select>
+                </div>
+              </div>
+              <div class="calculate__entrance">
+                <div class="calculate__field calculate__field--entrance">
+                  <label class="calculate__fieldname calculate__fieldname--star calculate__fieldname--entrance" for="entrance">Входная дверь</label>
+                  <div class="calculate__entrance-wrapper">
+                    <input class="calculate__select-box calculate__select-box--entrance" type="range" name="entrance" id="entrance" min="1" max="40" step="1" value="40">
+                    <output class="calculate__option calculate__entrance-output" id="entranceoutput">Нет</output>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="calculate__inner--footer">
+              <p class="calculate__note">*Напоминаем, что это примерная стоимость</p>
+              <div class="calculate__total">
+                <span class="calculate__total-text">Стоимость вашего ремонта</span>
+                <span class="calculate__total-text">Итого: <output class="calculate__total-output" name="result">140 000 руб.</output></span>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <aside class="information">
+        <h2 class="information__title">Лучшие компании по ремонту</h2>
+        <ul class="information__list">
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+            <picture>
+              <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+              <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+            </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+          <li class="information__item">
+            <div class="information__detailed">
+              <picture>
+                <source media="(min-width: 1351px)" srcset="img/desktop-images/information-img.png">
+                <img class="information__img" src="img/tablet-images/information-img.png" width="24" height="24" alt="Логотип компании Строй Комплект Сервис">
+              </picture>
+              <p class="information__text-block information__name-company">Строй Комплект Сервис</p>
+              <p class="information__text-block information__scores">2700 <span class="information__scores-text">баллов</span></p>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </main>
+    <footer></footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+@mixin typography($font-size, $line-height) {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+@mixin offset($padding, $margin) {
+  padding: $padding;
+  margin: $margin;
+}

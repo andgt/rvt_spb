@@ -1,0 +1,47 @@
+{
+  "name": "rvt-spb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "editorconfig": "editorconfig",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "test": "npm run editorconfig && npm run stylelint",
+    "build": "gulp styles",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "andgt",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "editorconfig": "^0.15.3",
+    "gh-pages": "^3.1.0",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "postcss": "^8.2.14",
+    "stylelint": "^13.12.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not ie <= 11"
+  ]
+}

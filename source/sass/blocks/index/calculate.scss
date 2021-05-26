@@ -1,0 +1,431 @@
+.calculate__description {
+  position: relative;
+
+  @include offset(13px 16px 19px 17px, 0 0 16px 0);
+  background-color: $white;
+  border-radius: 5px;
+
+  @media (min-width: $tablet-width) {
+    @include offset(24px 30px 21px 34px, 0 24px 24px 24px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include offset(39px 34px 39px 45px, 0 31px 27px 0);
+  }
+}
+
+.calculate__description::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 4px;
+  height: 95%;
+  background-color: $blue;
+}
+
+.calculate__description-text {
+  font-weight: 300;
+
+  @include offset(0, 0);
+  @include typography(14px, 20px);
+
+  @media (min-width: $tablet-width) {
+    min-height: 115px;
+
+    @include typography(16px, 22px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include typography(18px, 24px);
+  }
+}
+
+.calculate__wrapper {
+  @include offset(16px 0 0 0, 0);
+  border: 1px solid $lightgrey;
+  border-radius: 5px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 40px 0 0 0;
+    margin: 0 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 40px 0 0 0;
+    margin: 0 31px 0 0;
+  }
+}
+
+.calculate__title {
+  @include offset(0 0 0 16px, 0 0 25px 0);
+  font-weight: bold;
+
+  @include typography(18px, 22px);
+
+  @media (min-width: $tablet-width) {
+    @include offset(0, 0 0 24px 24px);
+    @include typography(22px, 27px);
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 50px;
+  }
+}
+
+.calculate__form {
+  @include offset(0, 0);
+}
+
+.calculate__form-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  column-gap: 10px;
+  row-gap: 24px;
+  padding: 0 16px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 342px 1fr;
+    column-gap: 48px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    padding: 0 108px 64px 49px;
+  }
+}
+
+.calculate__inner {
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 318px;
+    column-gap: 48px;
+  }
+}
+
+.calculate__inner--last {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    width: 318px;
+    margin-right: 48px;
+  }
+}
+
+.calculate__entrance {
+  @media (min-width: $tablet-width) {
+    grid-column: 2 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -318px;
+  }
+}
+
+.calculate__inner--footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 457px 1fr;
+    margin-top: 0;
+  }
+}
+
+.calculate__field {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 318px;
+  }
+}
+
+.calculate__field--doors {
+  width: 318px;
+}
+
+.calculate__field-wrapper {
+  display: flex;
+}
+
+.calculate__form .calculate__field:nth-child(odd) {
+  margin-bottom: 16px;
+}
+
+.calculate__field--entrance {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 39px;
+    margin-bottom: 0;
+  }
+}
+
+.calculate__field--bathroom {
+  width: 215px;
+}
+
+.calculate__entrance-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.calculate__entrance-output {
+  @include typography(18px, 24px);
+  letter-spacing: 0.05em;
+  color: $grey2;
+}
+
+.calculate__fieldname {
+  position: relative;
+  margin-bottom: 4px;
+
+  @include typography(12px, 16px);
+  color: $grey3;
+}
+
+.calculate__fieldname--star::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: -4px;
+  width: 4px;
+  height: 4px;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3C!-- Creator: CorelDRAW 2020 (64-Bit) --%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xml:space='preserve' width='4px' height='4px' version='1.1' style='shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd'%0AviewBox='0 0 5.03 4.8' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:xodm='http://www.corel.com/coreldraw/odm/2003'%3E%3Cdefs%3E%3Cstyle type='text/css'%3E%3C!%5BCDATA%5B .fil0 %7Bfill:%23D22E2E%7D %5D%5D%3E%3C/style%3E%3C/defs%3E%3Cg id='Слой_x0020_1'%3E%3Cmetadata id='CorelCorpID_0Corel-Layer'/%3E%3Cpath class='fil0' d='M0.72 0.56c0,0 0.31,-0.19 0.94,-0.56 0.56,0.99 0.84,1.48 0.84,1.48 0.58,-0.98 0.86,-1.48 0.86,-1.48 0.63,0.37 0.94,0.55 0.94,0.55 -0.64,0.92 -0.95,1.38 -0.95,1.38 1.11,-0.03 1.67,-0.05 1.67,-0.05 0.01,0.69 0.01,1.04 0.01,1.04 -1.12,-0.04 -1.68,-0.06 -1.68,-0.06 0.63,0.92 0.95,1.39 0.95,1.39 -0.62,0.37 -0.94,0.55 -0.94,0.55 -0.56,-0.99 -0.84,-1.49 -0.84,-1.49 -0.57,0.99 -0.86,1.49 -0.86,1.49 -0.63,-0.37 -0.94,-0.56 -0.94,-0.56 0.64,-0.92 0.96,-1.38 0.96,-1.38 -1.12,0.04 -1.68,0.06 -1.68,0.06 0,-0.7 0.01,-1.05 0.01,-1.05 1.11,0.04 1.66,0.06 1.66,0.06 -0.63,-0.91 -0.95,-1.37 -0.95,-1.37l0 -0.01 0 0.01z'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+}
+
+.calculate__fieldname--entrance {
+  margin-bottom: 9px;
+}
+
+.calculate__select-box {
+  width: 100%;
+  min-width: 288px;
+
+  @include offset(13px 0 13px 17px, 0);
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+
+  @include typography(18px, 24px);
+  letter-spacing: 0.05em;
+  color: $grey2;
+  border: 1px solid $grey1;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 4px;
+  }
+}
+
+.calculate__select-box:hover {
+  border-color: $grey2;
+}
+
+.calculate__select-box--electrician {
+  font-size: 14px;
+}
+
+.calculate__select-box--bathroom {
+  width: 215px;
+  min-width: 215px;
+}
+
+.calculate__field--bathroom-show {
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.calculate__field--bathroom-hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s;
+}
+
+.calculate__select-box--drop-down {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='30' height='30' rx='4' fill='%23FAFAFA'/%3E%3Cpath d='M18 12L11 12L14.5 18L18 12Z' fill='%23949494'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 95% 10px;
+}
+
+.calculate__select-box--entrance {
+  min-width: 60px;
+  max-width: 60px;
+  height: 32px;
+  appearance: none;
+
+  @include offset(3px, 0);
+  border: 0;
+  border-radius: 20px;
+  background-color: $lightgrey3;
+  margin-right: 12px;
+  transition: 0.3s ease;
+}
+
+.calculate__select-box--entrance::-webkit-slider-thumb {
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  background-color: $white;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+.calculate__select-box--entrance::-moz-range-thumb {
+  appearance: none;
+  width: 27px;
+  height: 27px;
+  border: 0;
+  background-color: $white;
+  border-radius: 20px;
+}
+
+.calculate__option {
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+
+  @include typography(18px, 24px);
+  letter-spacing: 0.05em;
+  color: $grey2;
+  border: 0;
+}
+
+.calculate__option--electrician {
+  font-size: 14px;
+}
+
+.calculate__input-range {
+  appearance: none;
+
+  @include offset(0, -1px 0 0 4px);
+  width: 97%;
+  height: 1px;
+  background-color: $blue;
+
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    top: -13px;
+  }
+}
+
+.calculate__input-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: $white;
+  border: 1px solid $grey1;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.calculate__input-range::-moz-range-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: $white;
+  border: 1px solid $grey1;
+  border-radius: 20px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.calculate__input-range--bathroom {
+  max-width: 215px;
+}
+
+.calculate__note {
+  font-weight: 300;
+
+  @include offset(0, 0 0 25px 0);
+  @include typography(14px, 22px);
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2/ 3;
+    grid-row: 1 / 3;
+    margin-bottom: 0;
+    padding: 36px 197px 52px 38px;
+    text-align: left;
+  }
+}
+
+.calculate__total {
+  display: flex;
+  flex-direction: column;
+
+  @include offset(13px 41px 17px 42px, 0);
+  background-color: $blue1;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    padding: 24px 0 0 49px;
+  }
+}
+
+.calculate__total-text {
+  @include typography(18px, 24px);
+  color: $white;
+  text-align: center;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.calculate__total-text:first-of-type {
+  margin-bottom: 8px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 16px;
+  }
+}
+
+.calculate__total-text:last-of-type {
+  line-height: 21px;
+
+  @media (min-width: $tablet-width) {
+    @include typography(24px, 28px);
+  }
+}
+
+.calculate__total-output {
+  display: inline-block;
+  margin-left: 24px;
+  font-weight: 700;
+
+  @include typography(24px, 29px);
+
+  @media (min-width: $tablet-width) {
+    @include typography(36px, 44px);
+  }
+}
