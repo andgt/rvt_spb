@@ -52,6 +52,18 @@ for (let inputRange of inputRanges) {
 
 assignValue();
 
+inputRangeArea.oninput = function () {
+  let rangeAreaValue = (inputRangeArea.value * 100) / 300;
+  let rangeAreaColor = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeAreaValue + '%, rgb(229, 229, 229) 2%, rgb(229, 229, 229) 100%)';
+  inputRangeArea.style.background = rangeAreaColor;
+};
+
+inputRangeBathroom.oninput = function () {
+  let rangeBathroomValue = (inputRangeBathroom.value * 100) / 20;
+  let rangeBathroomColor = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeBathroomValue + '%, rgb(229, 229, 229) 2%, rgb(229, 229, 229) 100%)';
+  inputRangeBathroom.style.background = rangeBathroomColor;
+};
+
 /*
   ТП = Тип помещения (вторичка или новостройка) * ПР.
   ПР = Площадь ремонта.
