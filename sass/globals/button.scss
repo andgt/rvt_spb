@@ -1,0 +1,41 @@
+.button {
+  display: block;
+
+  @include offset(0, 0);
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button__add {
+  display: none;
+  font-weight: 600;
+  transition: 0.5s ease;
+
+  @include offset(14px 31px 13px 32px, 0 0 20px 0);
+  @include typography(14px, 17px);
+  color: $white;
+  background-color: $blue;
+  border-radius: 4px;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding: 10px 6px 9px 7px;
+    margin-bottom: 0;
+
+    @include typography(16px, 19px);
+  }
+}
+
+.button__add--open {
+  display: block;
+}
+
+.button__add:hover,
+.button__add:focus {
+  background-color: $blue2;
+}
+
+.button__add:active {
+  background-color: $blue1;
+}

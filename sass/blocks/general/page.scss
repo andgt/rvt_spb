@@ -1,0 +1,24 @@
+.page {
+  max-width: 1920px;
+  height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  @include offset(0, 0 auto);
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  min-height: 100%;
+
+  @include offset(0, 0);
+  font-family: "Gilroy", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  @include typography(14px, 16px);
+  color: $black;
+  background-color: $lightgrey1;
+}

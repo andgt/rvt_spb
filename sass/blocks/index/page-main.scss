@@ -1,0 +1,17 @@
+.page-main {
+  display: grid;
+  grid-template-rows: min-content;
+  align-content: start;
+
+  @include offset(0, 0);
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: minmax(582px, 843px) minmax(186px, 407px);
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 874px 447px;
+    margin: 0 auto;
+  }
+}
