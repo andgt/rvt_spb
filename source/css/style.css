@@ -789,7 +789,7 @@ a {
   margin: -1px 0 0 4px;
   width: 97%;
   height: 1px;
-  background: linear-gradient(90deg, #4496f6 0%, #4496f6 18%, #e5e5e5 18%, #e5e5e5 100%); }
+  background: linear-gradient(90deg, #4496f6 0%, #4496f6 15%, #e5e5e5 15%, #e5e5e5 100%); }
   @media (max-width: 767px) {
     .calculate__input-range {
       position: relative;
