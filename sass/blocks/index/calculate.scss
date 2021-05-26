@@ -331,7 +331,7 @@
   @include offset(0, -1px 0 0 4px);
   width: 97%;
   height: 1px;
-  background: linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246) 18%, rgb(229, 229, 229) 18%, rgb(229, 229, 229) 100%);
+  background: linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246) 15%, rgb(229, 229, 229) 15%, rgb(229, 229, 229) 100%);
 
   @media (max-width: $mobile-width-only) {
     position: relative;
