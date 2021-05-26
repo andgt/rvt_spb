@@ -789,7 +789,7 @@ a {
   margin: -1px 0 0 4px;
   width: 97%;
   height: 1px;
-  background-color: #4496f6; }
+  background: linear-gradient(90deg, #4496f6 0%, #4496f6 18%, #e5e5e5 18%, #e5e5e5 100%); }
   @media (max-width: 767px) {
     .calculate__input-range {
       position: relative;
@@ -816,7 +816,8 @@ a {
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); }
 
 .calculate__input-range--bathroom {
-  max-width: 215px; }
+  max-width: 215px;
+  background: linear-gradient(90deg, #4496f6 0%, #4496f6 40%, #e5e5e5 40%, #e5e5e5 100%); }
 
 .calculate__note {
   font-weight: 300;
