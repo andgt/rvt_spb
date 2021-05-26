@@ -696,7 +696,8 @@ a {
   border: 1px solid #e5e5e5;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s ease; }
+  transition: 0.3s ease;
+  background-color: #ffffff; }
   @media (max-width: 767px) {
     .calculate__select-box {
       margin-top: 4px; } }
