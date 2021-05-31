@@ -789,11 +789,16 @@ a {
   margin: -1px 0 0 4px;
   width: 97%;
   height: 1px;
-  background: linear-gradient(90deg, #4496f6 0%, #4496f6 15%, #e5e5e5 15%, #e5e5e5 100%); }
+  background: linear-gradient(90deg, #4496f6 0%, #4496f6 15%, #e5e5e5 15%, #e5e5e5 100%);
+  transition: 0.3s ease; }
   @media (max-width: 767px) {
     .calculate__input-range {
       position: relative;
       top: -13px; } }
+
+.calculate__select-box:hover + .calculate__input-range {
+  background: linear-gradient(90deg, #4496f6 0%, #4496f6 15%, #666666 15%, #666666 100%);
+  transition: 0.5 ease; }
 
 .calculate__input-range::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -818,6 +823,9 @@ a {
 .calculate__input-range--bathroom {
   max-width: 215px;
   background: linear-gradient(90deg, #4496f6 0%, #4496f6 40%, #e5e5e5 40%, #e5e5e5 100%); }
+
+.calculate__select-box:hover + .calculate__input-range--bathroom {
+  background: linear-gradient(90deg, #4496f6 0%, #4496f6 15%, #666666 55%, #666666 100%); }
 
 .calculate__note {
   font-weight: 300;

@@ -38,11 +38,15 @@ let inputRangeArea = document.getElementById("rangearea");
 let inputRangeBathroom = document.getElementById("rangebathroom");
 let selectArea = document.getElementById("area");
 let selectBathroom = document.getElementById("bathroomarea");
+let selectColor = "rgb(102, 102, 102)";
+let selectColorDefault = "rgb(229, 229, 229)";
 
 const assignValue = function () {
   selectBathroom.value = inputRangeBathroom.value;
   selectArea.value = inputRangeArea.value;
 };
+
+assignValue();
 
 for (let inputRange of inputRanges) {
   inputRange.addEventListener("input", function () {
@@ -50,18 +54,28 @@ for (let inputRange of inputRanges) {
   });
 };
 
-assignValue();
-
 inputRangeArea.oninput = function () {
   let rangeAreaValue = (inputRangeArea.value * 100) / 300;
-  let rangeAreaColor = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeAreaValue + '%, rgb(229, 229, 229) 2%, rgb(229, 229, 229) 100%)';
+  let rangeAreaColor = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeAreaValue + '%, rgb(102, 102, 102) 2%, rgb(102, 102, 102) 100%)';
   inputRangeArea.style.background = rangeAreaColor;
+  selectArea.style.borderColor = selectColor;
+
+  inputRangeArea.addEventListener("mouseleave", function() {
+    selectArea.style.borderColor = selectColorDefault;
+    inputRangeArea.style.background = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeAreaValue + '%, rgb(229, 229, 229) 2%, rgb(229, 229, 229) 100%)';
+  });
 };
 
 inputRangeBathroom.oninput = function () {
   let rangeBathroomValue = (inputRangeBathroom.value * 100) / 20;
-  let rangeBathroomColor = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeBathroomValue + '%, rgb(229, 229, 229) 2%, rgb(229, 229, 229) 100%)';
+  let rangeBathroomColor = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeBathroomValue + '%, rgb(102, 102, 102) 2%, rgb(102, 102, 102) 100%)';
   inputRangeBathroom.style.background = rangeBathroomColor;
+  selectBathroom.style.borderColor = selectColor;
+
+  inputRangeBathroom.addEventListener("mouseleave", function() {
+    selectBathroom.style.borderColor = selectColorDefault;
+    inputRangeBathroom.style.background = 'linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246)' + rangeBathroomValue + '%, rgb(229, 229, 229) 2%, rgb(229, 229, 229) 100%)';
+  });
 };
 
 /*
