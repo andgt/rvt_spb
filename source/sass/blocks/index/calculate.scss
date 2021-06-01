@@ -233,7 +233,7 @@
   color: $grey2;
   border: 1px solid $grey1;
   border-radius: 5px;
-  cursor: url("../img/brick-icon.svg"), auto;
+  cursor: pointer;
   transition: 0.3s ease;
   background-color: $white;
 
@@ -333,6 +333,7 @@
   height: 1px;
   background: linear-gradient(90deg, rgb(68, 150, 246) 0%, rgb(68, 150, 246) 15%, rgb(229, 229, 229) 15%, rgb(229, 229, 229) 100%);
   transition: 0.3s ease;
+  cursor: pointer;
 
   @media (max-width: $mobile-width-only) {
     position: relative;
