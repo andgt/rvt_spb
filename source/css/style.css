@@ -207,7 +207,8 @@ a {
     transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease; }
   .form__input-search {
     width: 0;
-    outline: none; }
+    outline: none;
+    background-color: #fafafa; }
   .form__input-search::-webkit-search-cancel-button {
     position: relative;
     font-size: 24px;
@@ -343,7 +344,11 @@ a {
     .main-nav__list {
       visibility: visible;
       display: flex;
-      flex-wrap: wrap; } }
+      flex-wrap: wrap;
+      width: 100%;
+      height: auto;
+      transform: none;
+      opacity: 1; } }
 
 .main-nav__link {
   display: block;
@@ -382,7 +387,7 @@ a {
 
 @media (min-width: 1351px) {
   .main-nav__item:first-child .main-nav__link {
-    padding-left: 21px; } }
+    padding-left: 0; } }
 
 @media (max-width: 767px) {
   .main-nav__closed {

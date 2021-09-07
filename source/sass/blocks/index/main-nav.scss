@@ -25,6 +25,10 @@
     visibility: visible;
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    transform: none;
+    opacity: 1;
   }
 }
 
@@ -70,7 +74,7 @@
 
 .main-nav__item:first-child .main-nav__link {
   @media (min-width: $desktop-width) {
-    padding-left: 21px;
+    padding-left: 0;
   }
 }
 

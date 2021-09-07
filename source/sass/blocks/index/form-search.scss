@@ -129,6 +129,7 @@
   .form__input-search {
     width: 0;
     outline: none;
+    background-color: $grey;
   }
 
   .form__input-search::-webkit-search-cancel-button {
